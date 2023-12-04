@@ -1,0 +1,21 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Teddy Caddy
+	email = REDACTED
+[core]
+	editor = subl -w -n
+[push]
+	default = current
+[color]
+	ui = auto
+[rebase]
+	autosquash = true
+[alias]
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	bbd = branch --sort=-committerdate
+	grepout = "!git checkout $(git branch | grep \"$1\" | tail -n 1) #"
+	wiff = diff -w --color-words=.
+	co = checkout
+	go = grepout
+
